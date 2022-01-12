@@ -33,22 +33,16 @@ const tasks = [
   },
 ];
 
-tasks.forEach((task) => {
+tasks.forEach(() => {
   const li = document.createElement('li');
-  const checkBox = document.createElement('input');
-  const icon = document.createElement('i');
-  const label = document.createElement('label');
 
   li.classList = 'list-group-item';
   li.setAttribute('draggable', 'true');
-  checkBox.type = 'checkbox';
-  checkBox.classList = 'checkbox';
-  checkBox.checked = task.completed;
-  label.innerHTML = task.description;
-  icon.classList = 'fa fa-ellipsis-v drag-drop float-end';
+  li.innerHTML = `
+  <input type="checkbox" class="checkbox">
+  <label>Set up a project with webpack</label>
+  <i class="fa fa-ellipsis-v drag-drop float-end"></i>
+  `
 
-  li.appendChild(checkBox);
-  li.appendChild(label);
-  li.appendChild(icon);
   document.querySelector('.list-group').appendChild(li);
 });

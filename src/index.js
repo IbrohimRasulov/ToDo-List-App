@@ -1,37 +1,6 @@
 import './style.css';
 
-const tasks = [
-  {
-    description: 'Set up a project with webpack',
-    completed: true,
-    index: 1,
-  },
-  {
-    description: 'Created an index.html file',
-    completed: true,
-    index: 2,
-  },
-  {
-    description: 'Set an array of sample to-do tasks',
-    completed: true,
-    index: 3,
-  },
-  {
-    description: 'Create a funtion to populate the HTML',
-    completed: true,
-    index: 4,
-  },
-  {
-    description: 'Dynamically create list of tasks',
-    completed: true,
-    index: 5,
-  },
-  {
-    description: 'Created a style.css',
-    completed: true,
-    index: 6,
-  },
-];
+const tasks = [];
 
 tasks.forEach((task) => {
   const li = document.createElement('li');

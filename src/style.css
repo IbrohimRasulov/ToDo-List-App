@@ -22,19 +22,19 @@ main {
   color: #6948fb;
 }
 
-#title {
+#task-input {
   border: none;
   width: 90%;
   padding: 8px 16px;
   margin-top: 0;
 }
 
-#title::placeholder {
+#task-input::placeholder {
   font-style: italic;
   color: #bbb;
 }
 
-#title:focus {
+#task-input:focus {
   outline: none;
   background: white;
 }

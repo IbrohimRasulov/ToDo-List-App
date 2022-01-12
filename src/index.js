@@ -1,17 +1,17 @@
 import './style.css';
 
+const submitForm = document.querySelector('form');
+const taskInput = document.querySelector('#task-input');
+
 const tasks = [];
 
-tasks.forEach((task) => {
-  const li = document.createElement('li');
+submitForm.addEventListener('submit', (e) => {
+  e.preventDefault();
 
-  li.classList = 'list-group-item';
-  li.setAttribute('draggable', 'true');
-  li.innerHTML = `
-  <input type="checkbox" class="checkbox" checked="${task.completed}">
-  <label>${task.description}</label>
-  <i class="fa fa-ellipsis-v drag-drop float-end"></i>
-  `
+  tasks.push({description: taskInput.value, completed: false, index: tasks.length})
 
-  document.querySelector('.list-group').appendChild(li);
+  localStorage.setItem('tasks', JSON.stringify(tasks))
+
+  taskInput.value = '';
+  console.log(tasks);
 });

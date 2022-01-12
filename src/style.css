@@ -54,16 +54,20 @@ main {
   color: #3ac47d;
 }
 
-.checkbox {
-  margin-right: 10px;
-}
-
 .drag-drop {
   cursor: all-scroll;
   color: #888;
-  padding-top: 4px;
+  padding-right: 10px;
 }
 
-.drag-drop:hover {
-  color: black;
+.checkbox {
+  margin-right: 5px;
+}
+
+.delete-btn {
+  padding: 4px;
+  margin-right: -10px;
+  color: red;
+  border-radius: 3px;
+  cursor: pointer;
 }

@@ -29,9 +29,10 @@ const displayTasksFromLS = () => {
     li.classList = 'list-group-item';
     li.setAttribute('draggable', 'true');
     li.innerHTML = `
+    <i class="fas fa-bars drag-drop"></i>
     <input type="checkbox" class="checkbox" checked="${task.completed}">
     <label>${task.description}</label>
-    <i class="fa fa-ellipsis-v drag-drop float-end"></i>
+    <i class="fa fa-trash-alt delete-btn float-end"></i>
     `;
 
     document.querySelector('.list-group').appendChild(li);

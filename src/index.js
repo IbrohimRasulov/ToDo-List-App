@@ -33,14 +33,14 @@ const tasks = [
   },
 ];
 
-tasks.forEach(() => {
+tasks.forEach((task) => {
   const li = document.createElement('li');
 
   li.classList = 'list-group-item';
   li.setAttribute('draggable', 'true');
   li.innerHTML = `
-  <input type="checkbox" class="checkbox">
-  <label>Set up a project with webpack</label>
+  <input type="checkbox" class="checkbox" checked="${task.completed}">
+  <label>${task.description}</label>
   <i class="fa fa-ellipsis-v drag-drop float-end"></i>
   `
 

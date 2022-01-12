@@ -11,7 +11,7 @@
 
 ### Live Demo
 
-[Live Demo Link](https://ibrohimrasulov.github.io/ToDo-List-App/)
+[Live Demo Link](https://ibrohimrasulov.github.io/ToDo-List-App/dist)
 
 ## Built With
 

@@ -1,0 +1,68 @@
+main {
+  max-width: 400px;
+  margin: 70px auto 0 auto;
+}
+
+#todo-title {
+  font-weight: 300;
+  border-bottom: 1px solid #ddd;
+  padding: 8px 16px;
+  margin-bottom: 0;
+}
+
+#clr-btn {
+  border: none;
+  padding: 12px;
+  color: #888;
+  font-weight: 300;
+}
+
+#clr-btn:hover {
+  color: #6948fb;
+}
+
+#title {
+  border: none;
+  width: 90%;
+  padding: 8px 16px;
+  margin-top: 0;
+}
+
+#title::placeholder {
+  font-style: italic;
+  color: #bbb;
+}
+
+#title:focus {
+  outline: none;
+  background: white;
+}
+
+#submit-btn {
+  float: right;
+  border: none;
+  background: none;
+  color: #888;
+  cursor: pointer;
+  outline: none;
+  font-size: 22px;
+  padding: 5px 5px 0 5px;
+}
+
+#submit-btn:hover {
+  color: #3ac47d;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
+.drag-drop {
+  cursor: all-scroll;
+  color: #888;
+  padding-top: 4px;
+}
+
+.drag-drop:hover {
+  color: black;
+}

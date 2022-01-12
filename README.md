@@ -1,45 +1,55 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Webpack-template
+# To Do list
 
-> This is a ready webpack template that can be used when you start a new project.
+> Build a To Do List JavaScript application
+![app-screenshot](./app-screenshot.png)
+
+## About The Project
+
+> The project I have built is based on a simple app which adds tasks, marks them as completed and deletes all completed tasks. This project has been built with the help of modern CSS3, Bootstrap 5, JavaScript and webpack to bundle JavaScript. Check the live demo to try.
+
+## Built With
+
+- JavaScript, HTML, CSS
+- Webpack
 
 ### Prerequisites
-
     - node
 
 ### Setup
-
-> Clone the repository to your local machine and run:
 ```
-npm install
-npm init -y
-npm install --save-dev webpack
-npm install --save lodash
-npx webpack --config webpack.config.js
-npm install webpack webpack-cli --save-dev
-npm install --save-dev style-loader css-loader
-npm install --save-dev csv-loader xml-loader
-npm install --save-dev html-webpack-plugin
-npm install --save-dev webpack-dev-server
+- npm install
+- Clone the repository to your local machine.
+- npm install webpack webpack-cli --save-dev
 ```
-
 ### Deployment
-
- > run:
+ run:
  ```
  npm run build
- npm start
  ```
+ and deploy the files in the ```dist``` folder
 
 ## Authors
 
 👤 **Ibrohim Rasulov**
 
-- [GitHub](https://github.com/IbrohimRasulov)
-- [Twitter](https://twitter.com/IbrohimRasu1ov)
-- [LinkedIn](https://www.linkedin.com/in/ibrohim-rasulov-a88352209/)
+- GitHub: [@IbrohimRasulov](https://github.com/IbrohimRasulov)
+- Twitter: [@IbrohimRasu1ov](https://twitter.com/IbrohimRasu1ov)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/ibrohim-rasulov-a88352209/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](https://github.com/IbrohimRasulov/ToDo-List-App/issues).
 
 ## Show your support
 
 Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc

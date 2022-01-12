@@ -9,6 +9,10 @@
 
 > The project I have built is based on a simple app which adds tasks, marks them as completed and deletes all completed tasks. This project has been built with the help of modern CSS3, Bootstrap 5, JavaScript and webpack to bundle JavaScript. Check the live demo to try.
 
+### Live Demo
+
+[Live Demo Link](https://ibrohimrasulov.github.io/ToDo-List-App/)
+
 ## Built With
 
 - JavaScript, HTML, CSS

@@ -1,40 +1,15 @@
 import './style.css';
+import {addTask, displayTasksFromLS} from './add&delete'
 
-const submitForm = document.querySelector('form');
-const taskInput = document.querySelector('#task-input');
-const todoList = document.querySelector('.list-group');
+let tasks = [];
 
-const tasks = [];
+const getFromLS = () => {
+  if (localStorage.length !== 0) {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+    displayTasksFromLS(tasks);
+  }
+}
 
-submitForm.addEventListener('submit', (e) => {
-  e.preventDefault();
+getFromLS();
 
-  tasks.push({ description: taskInput.value, completed: false, index: tasks.length });
-  localStorage.setItem('tasks', JSON.stringify(tasks));
-
-  todoList.innerHTML = '';
-
-  displayTasksFromLS();
-
-  taskInput.value = '';
-
-  console.log(tasks);
-});
-
-
-const displayTasksFromLS = () => {
-  tasks.forEach((task) => {
-    const li = document.createElement('li');
-
-    li.classList = 'list-group-item';
-    li.setAttribute('draggable', 'true');
-    li.innerHTML = `
-    <i class="fas fa-bars drag-drop"></i>
-    <input type="checkbox" class="checkbox" checked="${task.completed}">
-    <label>${task.description}</label>
-    <i class="fa fa-trash-alt delete-btn float-end"></i>
-    `;
-
-    document.querySelector('.list-group').appendChild(li);
-  });
-};
+addTask(tasks);

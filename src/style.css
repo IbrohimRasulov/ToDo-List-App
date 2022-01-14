@@ -77,3 +77,9 @@ main {
   text-decoration: line-through;
   color: #bbb;
 }
+
+.singleTaskInput {
+  width: 85%;
+  border: 0;
+  outline: none;
+}

@@ -33,11 +33,16 @@ const printTask = (task) => {
   li.innerHTML = `
   <i class="fa fa-grip-vertical drag-drop"></i>
   <input type="checkbox" class="checkbox">
-  <label id="${task.index}">${task.description}</label>
+  <input type="text" id="${task.index}" value="${task.description}" class="singleTaskInput">
   <i class="fa fa-trash-alt delete-btn float-end"></i>
   `;
 
   document.querySelector('.list-group').appendChild(li);
+
+  if (task.completed === true) {
+    li.children[2].classList.add('checked');
+    li.children[1].checked = true;
+  }
 
   return li;
 }

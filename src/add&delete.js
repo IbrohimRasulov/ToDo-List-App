@@ -42,12 +42,12 @@ const deleteTask = (li, tasks) => {
     localStorage.clear();
     localStorage.setItem('tasks', JSON.stringify(tasks));
 
+    /* eslint-disable */
     todoList.innerHTML = '';
     displayTasksFromLS(tasks);
   });
 };
 
-/* eslint-disable */
 const displayTasksFromLS = (tasks) => {
   tasks.forEach((task) => {
     const li = printTask(task);

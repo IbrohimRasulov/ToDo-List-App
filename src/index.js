@@ -1,5 +1,5 @@
 import './style.css';
-import {addTask, displayTasksFromLS} from './add&delete'
+import {addTask, displayTasksFromLS, deleteTask} from './add&delete'
 
 let tasks = [];
 

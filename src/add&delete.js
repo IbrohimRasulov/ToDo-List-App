@@ -1,5 +1,6 @@
 export {addTask, displayTasksFromLS, deleteTask}
 import isChecked from './updateStatus'
+import editTask from './editTask';
 
 const submitForm = document.querySelector('form');
 const taskInput = document.querySelector('#task-input');
@@ -10,6 +11,7 @@ const displayTasksFromLS = (tasks) => {
     let li = printTask(task);
     isChecked(li, tasks);
     deleteTask(li, tasks);
+    editTask(li, tasks);
   });
 };
 
@@ -49,14 +51,12 @@ const printTask = (task) => {
 
 const deleteTask = (li, tasks) => {
   li.children[3].addEventListener('click', () => {
-    console.log(tasks);
     for(let i = 0; i < tasks.length; i += 1) {
       if ((tasks[i].index) == (li.children[2].id)) {
         tasks.splice(i, 1);
       }
     }
 
-    console.log(tasks);
     tasks.forEach((task, index) => {
       task.index = index;
     });
@@ -66,7 +66,5 @@ const deleteTask = (li, tasks) => {
 
     todoList.innerHTML = '';
     displayTasksFromLS(tasks);
-
-    console.log(tasks);
   });
 }

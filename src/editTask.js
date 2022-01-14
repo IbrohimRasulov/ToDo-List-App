@@ -1,7 +1,9 @@
 export {editTask as default}
 
-const
-
 const editTask = (li, tasks) => {
-  li.children[2].adde
+  li.children[2].addEventListener('keyup', (event) => {
+    tasks[event.target.id].description = event.target.value;
+    localStorage.clear();
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+  });
 }

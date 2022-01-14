@@ -1,6 +1,7 @@
 main {
   max-width: 400px;
   margin: 70px auto 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.56) 0 22px 70px 4px;
 }
 
 #todo-title {
@@ -21,19 +22,19 @@ main {
   color: #6948fb;
 }
 
-#title {
+#task-input {
   border: none;
   width: 90%;
   padding: 8px 16px;
   margin-top: 0;
 }
 
-#title::placeholder {
+#task-input::placeholder {
   font-style: italic;
   color: #bbb;
 }
 
-#title:focus {
+#task-input:focus {
   outline: none;
   background: white;
 }
@@ -53,16 +54,32 @@ main {
   color: #3ac47d;
 }
 
-.checkbox {
-  margin-right: 10px;
-}
-
 .drag-drop {
   cursor: all-scroll;
   color: #888;
-  padding-top: 4px;
+  padding-right: 5px;
+  margin-left: -5px;
 }
 
-.drag-drop:hover {
-  color: black;
+.checkbox {
+  margin-right: 5px;
+}
+
+.delete-btn {
+  padding: 4px;
+  margin-right: -10px;
+  color: red;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.checked {
+  text-decoration: line-through;
+  color: #bbb;
+}
+
+.singleTaskInput {
+  width: 85%;
+  border: 0;
+  outline: none;
 }

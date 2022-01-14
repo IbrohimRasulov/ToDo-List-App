@@ -1,6 +1,5 @@
 import isChecked from './updateStatus';
 import editTask from './editTask';
-export { addTask, displayTasksFromLS, deleteTask };
 
 const submitForm = document.querySelector('form');
 const taskInput = document.querySelector('#task-input');
@@ -48,7 +47,7 @@ const deleteTask = (li, tasks) => {
   });
 };
 
-
+/* eslint-disable */
 const displayTasksFromLS = (tasks) => {
   tasks.forEach((task) => {
     const li = printTask(task);
@@ -57,6 +56,7 @@ const displayTasksFromLS = (tasks) => {
     editTask(li, tasks);
   });
 };
+/* eslint-enable */
 
 const addTask = (tasks) => {
   submitForm.addEventListener('submit', (e) => {
@@ -70,3 +70,5 @@ const addTask = (tasks) => {
     taskInput.value = '';
   });
 };
+
+export { addTask, displayTasksFromLS, deleteTask };

@@ -1,32 +1,11 @@
-export {addTask, displayTasksFromLS, deleteTask}
-import isChecked from './updateStatus'
+import isChecked from './updateStatus';
 import editTask from './editTask';
+export { addTask, displayTasksFromLS, deleteTask };
 
 const submitForm = document.querySelector('form');
 const taskInput = document.querySelector('#task-input');
 const todoList = document.querySelector('.list-group');
 
-const displayTasksFromLS = (tasks) => {
-  tasks.forEach((task) => {
-    let li = printTask(task);
-    isChecked(li, tasks);
-    deleteTask(li, tasks);
-    editTask(li, tasks);
-  });
-};
-
-const addTask = (tasks) => {
-  submitForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    tasks.push({ description: taskInput.value, completed: false, index: tasks.length });
-    localStorage.setItem('tasks', JSON.stringify(tasks));
-
-    todoList.innerHTML = '';
-    displayTasksFromLS(tasks);
-    taskInput.value = '';
-  });
-}
 const printTask = (task) => {
   const li = document.createElement('li');
 
@@ -47,12 +26,12 @@ const printTask = (task) => {
   }
 
   return li;
-}
+};
 
 const deleteTask = (li, tasks) => {
   li.children[3].addEventListener('click', () => {
-    for(let i = 0; i < tasks.length; i += 1) {
-      if ((tasks[i].index) == (li.children[2].id)) {
+    for (let i = 0; i < tasks.length; i += 1) {
+      if ((tasks[i].index) === (li.children[2].id)) {
         tasks.splice(i, 1);
       }
     }
@@ -67,4 +46,27 @@ const deleteTask = (li, tasks) => {
     todoList.innerHTML = '';
     displayTasksFromLS(tasks);
   });
-}
+};
+
+
+const displayTasksFromLS = (tasks) => {
+  tasks.forEach((task) => {
+    const li = printTask(task);
+    isChecked(li, tasks);
+    deleteTask(li, tasks);
+    editTask(li, tasks);
+  });
+};
+
+const addTask = (tasks) => {
+  submitForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    tasks.push({ description: taskInput.value, completed: false, index: tasks.length });
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    todoList.innerHTML = '';
+    displayTasksFromLS(tasks);
+    taskInput.value = '';
+  });
+};

@@ -1,5 +1,3 @@
-export {isChecked as default}
-
 const isChecked = (li, tasks) => {
   li.children[1].addEventListener('change', (event) => {
     li.children[2].classList.toggle('checked');
@@ -16,4 +14,6 @@ const isChecked = (li, tasks) => {
       localStorage.setItem('tasks', JSON.stringify(tasks));
     }
   });
-}
+};
+
+export { isChecked as default };

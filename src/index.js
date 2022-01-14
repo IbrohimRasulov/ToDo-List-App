@@ -1,5 +1,5 @@
 import './style.css';
-import {addTask, displayTasksFromLS, deleteTask} from './add&delete'
+import { addTask, displayTasksFromLS } from './add&delete';
 
 let tasks = [];
 
@@ -8,7 +8,7 @@ const getFromLS = () => {
     tasks = JSON.parse(localStorage.getItem('tasks'));
     displayTasksFromLS(tasks);
   }
-}
+};
 
 getFromLS();
 

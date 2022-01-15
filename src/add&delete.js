@@ -1,5 +1,6 @@
 import isChecked from './updateStatus';
 import editTask from './editTask';
+import clearTasks from './clearTasks';
 
 const submitForm = document.querySelector('form');
 const taskInput = document.querySelector('#task-input');
@@ -50,10 +51,12 @@ const deleteTask = (li, tasks) => {
 
 const displayTasksFromLS = (tasks) => {
   tasks.forEach((task) => {
+    clearTasks(tasks, todoList);
     const li = printTask(task);
     isChecked(li, tasks);
     deleteTask(li, tasks);
     editTask(li, tasks);
+
   });
 };
 /* eslint-enable */

@@ -32,7 +32,7 @@ const deleteTask = (li, tasks) => {
   li.children[3].addEventListener('click', () => {
     for (let i = 0; i < tasks.length; i += 1) {
       if ((tasks[i].index) === Number(li.children[2].id)) {
-        tasks.splice(i, 1);
+        tasks.filter((task) => task.completed === true);
       }
     }
 

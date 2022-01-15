@@ -2,9 +2,7 @@ import { displayTasksFromLS } from './add&delete'; // eslint-disable-line import
 
 const clearTask = (tasks, todoList) => {
   document.querySelector('#clr-btn').addEventListener('click', () => {
-    tasks = tasks.filter((task) => {
-      return task.completed === false;
-    });
+    tasks = tasks.filter((task) => task.completed === false);
 
     tasks.forEach((task, index) => {
       task.index = index;

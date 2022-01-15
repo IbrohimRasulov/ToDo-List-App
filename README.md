@@ -24,9 +24,14 @@
 ### Setup
 ```
 - npm install
-- Clone the repository to your local machine.
 - npm install webpack webpack-cli --save-dev
 ```
+
+### Clone the repository to your local machine
+```
+- git clone https://github.com/IbrohimRasulov/ToDo-List-App.git
+```
+
 ### Deployment
  run:
  ```

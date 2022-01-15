@@ -1,5 +1,6 @@
 import isChecked from './updateStatus';
 import editTask from './editTask';
+import clearTasks from './clearTasks'; // eslint-disable-line import/no-cycle
 
 const submitForm = document.querySelector('form');
 const taskInput = document.querySelector('#task-input');
@@ -30,7 +31,7 @@ const printTask = (task) => {
 const deleteTask = (li, tasks) => {
   li.children[3].addEventListener('click', () => {
     for (let i = 0; i < tasks.length; i += 1) {
-      if ((tasks[i].index) === (li.children[2].id)) {
+      if ((tasks[i].index) === Number(li.children[2].id)) {
         tasks.splice(i, 1);
       }
     }
@@ -50,10 +51,12 @@ const deleteTask = (li, tasks) => {
 
 const displayTasksFromLS = (tasks) => {
   tasks.forEach((task) => {
+    clearTasks(tasks, todoList);
     const li = printTask(task);
     isChecked(li, tasks);
     deleteTask(li, tasks);
     editTask(li, tasks);
+
   });
 };
 /* eslint-enable */

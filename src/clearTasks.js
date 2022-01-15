@@ -1,4 +1,4 @@
-import { displayTasksFromLS } from "./add&delete";
+import { displayTasksFromLS } from './add&delete'; // eslint-disable-line import/no-cycle
 
 const clearTask = (tasks, todoList) => {
   document.querySelector('#clr-btn').addEventListener('click', () => {

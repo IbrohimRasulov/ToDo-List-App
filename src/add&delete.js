@@ -1,6 +1,6 @@
 import isChecked from './updateStatus';
 import editTask from './editTask';
-import clearTasks from './clearTasks';
+import clearTasks from './clearTasks'; // eslint-disable-line import/no-cycle
 
 const submitForm = document.querySelector('form');
 const taskInput = document.querySelector('#task-input');

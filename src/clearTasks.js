@@ -1,7 +1,6 @@
 import { displayTasksFromLS } from "./add&delete";
 
 const clearTask = (tasks, todoList) => {
-  console.log(tasks)
   document.querySelector('#clr-btn').addEventListener('click', () => {
     for (let i = 0; i < tasks.length; i += 1) {
       if ((tasks[i].completed) === true) {

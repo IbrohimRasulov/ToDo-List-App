@@ -8,7 +8,7 @@
 
 ### Live Demo
 
-[Live Demo Link](https://ibrohimrasulov.github.io/ToDo-List-App/dist)
+[Live Demo Link](https://ibrohimrasulov.github.io/ToDo-List-App/dist/)
 
 ## Built With
 

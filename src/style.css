@@ -68,14 +68,17 @@ main {
 .delete-btn {
   padding: 4px;
   margin-right: -10px;
-  color: red;
   border-radius: 3px;
   cursor: pointer;
 }
 
+.delete-btn:hover {
+  color: red;
+}
+
 .checked {
   text-decoration: line-through;
-  color: #bbb;
+  color: #999;
 }
 
 .singleTaskInput {

@@ -2,12 +2,9 @@
 
 # To Do list
 
-> Build a To Do List JavaScript application
-![app-screenshot](./app-screenshot.png)
-
-## About The Project
-
 > The project I have built is based on a simple app which adds tasks, marks them as completed and deletes all completed tasks. This project has been built with the help of modern CSS3, Bootstrap 5, JavaScript and webpack to bundle JavaScript. Check the live demo to try.
+
+![app-screenshot](./app-screenshot.png)
 
 ### Live Demo
 
